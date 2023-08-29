@@ -26,14 +26,63 @@ function page() {
       </Box>
 
       <Box>
-        <Box sx={{ background: "#777", textAlign: "center" }}>
-          <Box sx={{p:"50px 200px"}}>
+        <Box sx={{ textAlign: "center" }}>
+          <Box sx={{ p: "50px 200px" }}>
             <Typography sx={{ fontSize: "2vw", color: "white" }}>
               Description
             </Typography>
             <Typography sx={{ fontSize: "1vw", color: "white" }}>
               ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             </Typography>
+          </Box>
+        </Box>
+        <Box sx={{margin:"auto",width:"88%"}}>
+          <Box sx={{ display: "flex", gap: "50px"}}>
+            <Box
+              sx={{
+                border: "5px solid #bbb",
+                borderRadius: "5px",
+                width: "300px",
+                height: "300px",
+                pesition: "relative",
+              }}
+            ></Box>
+            <Box
+              sx={{
+                border: "5px solid #bbb",
+                borderRadius: "5px",
+                width: "300px",
+                height: "300px",
+                pesition: "relative",
+              }}
+            ></Box>
+            <Box
+              sx={{
+                border: "5px solid #bbb",
+                borderRadius: "5px",
+                width: "300px",
+                height: "300px",
+                pesition: "relative",
+              }}
+            ></Box>
+            <Box
+              sx={{
+                border: "5px solid #bbb",
+                borderRadius: "5px",
+                width: "300px",
+                height: "300px",
+                pesition: "relative",
+              }}
+            ></Box>
+            <Box
+              sx={{
+                border: "5px solid #bbb",
+                borderRadius: "5px",
+                width: "300px",
+                height: "300px",
+                pesition: "relative",
+              }}
+            ></Box>
           </Box>
         </Box>
       </Box>
