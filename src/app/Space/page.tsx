@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -39,7 +39,13 @@ function page() {
 
   return (
     <Box>
-      
+      <Box className="header">
+        <Typography
+          sx={{ fontSize: "4vw", textAlign: "center", color: "white" }}
+        >
+          Space
+        </Typography>
+      </Box>
 
       <Box>
         <Box sx={{ textAlign: "center" }}>
@@ -54,9 +60,8 @@ function page() {
         </Box>
 
         <Box>
-
           <Box sx={{ margin: "auto", width: "88%" }}>
-            <Box sx={{ display: "flex", gap: "50px", p:"70px" }}>
+            <Box sx={{ display: "flex", gap: "50px", p: "70px" }}>
               {Card.map((card) => (
                 <Box
                   key={card.id}
@@ -68,8 +73,8 @@ function page() {
                     height: "300px",
                     position: "relative",
                     cursor: "pointer",
-                    color:"white",
-                    textAlign: "center"
+                    color: "white",
+                    textAlign: "center",
                   }}
                 >
                   <Typography
@@ -104,22 +109,20 @@ function page() {
                 </Box>
                 <Box sx={{ textAlign: "center" }}>
                   <Typography sx={{ fontSize: "2vw", color: "white" }}>
-                  {activeCard.title} Description
+                    {activeCard.title} Description
                   </Typography>
                   <Box sx={{ p: "10px 100px", width: "1000px" }}>
                     <Typography sx={{ fontSize: "1vw", color: "white" }}>
-                    {activeCard.description}                    </Typography>
+                      {activeCard.description}{" "}
+                    </Typography>
                   </Box>
                 </Box>
               </Box>
             </Box>
           </Box>
-          
         </Box>
 
-        <Box>
-          
-        </Box>
+        <Box></Box>
       </Box>
     </Box>
   );
