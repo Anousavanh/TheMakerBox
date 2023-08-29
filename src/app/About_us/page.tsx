@@ -18,7 +18,7 @@ const pages = [
 
 function page() {
 
-  const [activePage, setActivePage] = useState(pages[0])
+  // const [activePage, setActivePage] = useState(pages[0])
 
   return (
     <Box>
