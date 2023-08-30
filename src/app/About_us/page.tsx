@@ -19,7 +19,6 @@ const pages = [
 ];
 
 function page() {
-
   return (
     <Box>
       <Box className="header">
