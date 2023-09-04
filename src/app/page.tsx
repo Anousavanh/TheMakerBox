@@ -105,6 +105,7 @@ function page() {
             alignItems: "center",
             height: "400px",
             justifyContent: "center",
+            gap: "100px"
           }}
         >
           <Box>

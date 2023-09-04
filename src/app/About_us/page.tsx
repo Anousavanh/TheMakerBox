@@ -36,7 +36,7 @@ function page() {
           padding: "30px ",
         }}
       >
-        <Box sx={{ p: "0px 40px" }}>
+        {/* <Box sx={{ p: "0px 40px" }}>
           <Box
             sx={{
               width: "300px",
@@ -66,21 +66,20 @@ function page() {
               </Typography>
             ))}
           </Box>
-        </Box>
+        </Box> */}
 
-        <Box sx={{ width: "1000px" }}>
-          <Box sx={{ background: "white", p: "15px 20px" }}>
+        <Box sx={{ width: "1300px", }}>
+          <Box sx={{ color:"white", p: "15px 20px" }}>
             {pages.map((page) => (
-              <Box key={page.id} sx={{}}>
+              <Box key={page.id} sx={{ textAlign: "center",p: "20px 00px" }}>
                 <Typography
                   sx={{
-                    padding: "10px 15px",
-                    fontSize: "20px",
+                    fontSize: "30px",
                   }}
                 >
                   {page.title}
                 </Typography>
-                <Typography>{page.description}</Typography>
+                <Typography sx={{fontSize:"20px"}}>{page.description}</Typography>
               </Box>
             ))}
           </Box>

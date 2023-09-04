@@ -390,11 +390,8 @@ function page() {
         </Box>
 
         <Box>
-          <Box
-            sx={{
-            }}
-          >
-            <Box sx={{}}>
+          <Box>
+            <Box sx={{ margin: "0 auto", width: "40%", }}>
               {Card.map((card) => (
                 <Box
                   key={card.id}
@@ -410,7 +407,7 @@ function page() {
                     textAlign: "center",
                   }}
                 >
-                  <Box>
+                  <Box >
                     <Typography
                       sx={{
                         padding: "10px 15px",
