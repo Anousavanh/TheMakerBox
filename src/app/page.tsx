@@ -138,7 +138,7 @@ function page() {
 
       
 
-      {/* <Box sx={{ background: "#444",p: "20px 300px", xs: "block",height:"955px" }}>
+      <Box sx={{ background: "#444",p: "20px 300px", xs: "block",height:"955px" }}>
         <Box
           sx={{
             display: "flex",
@@ -158,7 +158,7 @@ function page() {
             ))}
           </Box>
         </Box>
-      </Box> */}
+      </Box>
     </Box>
   );
 }
