@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import Logo from "public/logo.png";
 import Button from "@mui/material/Button";
-import Container from '@mui/material/Container';
+import Container from "@mui/material/Container";
 
 const pages = [
   {
@@ -29,52 +29,16 @@ function page() {
       <Container maxWidth="xl">
         <Box
           sx={{
-            display: { xs:"none", sm: "none", md: "flex" },
+            display:"flex" ,
             alignItems: "center",
-            justifyContent: "space-between",
-            height: "891px",
-            
-          }}
-        >
-          <Box >
-            {pages.map((page) => (
-              <Typography sx={{ color: "#444", fontSize: "75px" }}>
-                {page.title}
-              </Typography>
-            ))}
-            <Box sx={{ textAlign: "center" }}>
-              <Button
-                size="large"
-                href="About_us"
-                sx={{
-                  my: 2,
-                  color: " #0EEEC4",
-                  p: "0px 20px",
-                  border: "0.5px solid #0EEEC4",
-                }}
-              >
-                About us
-              </Button>
-            </Box>
-          </Box>
-          <Box sx={{width:"500px"}}>
-            <Image src={Logo} alt="logo" />
-          </Box>
-          
-        </Box>
-
-
-        <Box
-          sx={{
-            display: { xs:"none",sm: "flex", md: "none" },
-            alignItems: "center",
-            height: "891px",
-            justifyContent: "center",
+            justifyContent: {xs:"center",sm:"center" ,md:"space-between"},
+            height: {xs:"400px",md:"891px"},
+            gap:{xs:"100px"}
           }}
         >
           <Box>
             {pages.map((page) => (
-              <Typography sx={{ color: "#444", fontSize: "30px" }}>
+              <Typography sx={{ color: "#444", fontSize: {xs:"25px",sm:"30px",md:"75px"} }}>
                 {page.title}
               </Typography>
             ))}
@@ -85,80 +49,20 @@ function page() {
                 sx={{
                   my: 2,
                   color: " #0EEEC4",
-                  p: "0px 20px",
+                  p: {xs:"0px 5px",md:"0px 20px"},
                   border: "0.5px solid #0EEEC4",
+                  fontSize:{xs:"14px"}
                 }}
               >
                 About us
               </Button>
             </Box>
           </Box>
-          <Box sx={{width:"400px"}}>
+          <Box sx={{ width: {xs:"150px",sm:"300px",md:"400px"} }}>
             <Image src={Logo} alt="logo" />
           </Box>
-          
-        </Box>
-
-        <Box
-          sx={{
-            display: { xs:"flex",sm: "none", md: "none" },
-            alignItems: "center",
-            height: "400px",
-            justifyContent: "center",
-            gap: "100px"
-          }}
-        >
-          <Box>
-            {pages.map((page) => (
-              <Typography sx={{ color: "#444", fontSize: "25px" }}>
-                {page.title}
-              </Typography>
-            ))}
-            <Box sx={{ textAlign: "center" }}>
-              <Button
-                size="large"
-                href="About_us"
-                sx={{
-                  my: 2,
-                  color: " #0EEEC4",
-                  p: "0px 5px",
-                  border: "0.5px solid #0EEEC4",
-                }}
-              >
-                About us
-              </Button>
-            </Box>
-          </Box>
-          <Box sx={{width:"200px"}}>
-            <Image src={Logo} alt="logo" />
-          </Box>
-          
         </Box>
       </Container>
-
-      
-
-      <Box sx={{ background: "#444",p: "20px 300px", xs: "block",height:"955px" }}>
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            height: "891px",
-          }}
-        >
-          <Box>
-            <Image src={Logo} alt="logo" />
-          </Box>
-          <Box sx={{ display: { xs: "block" } }}>
-            {pages.map((page) => (
-              <Typography sx={{ color: "#111", fontSize: "4vw" }}>
-                {page.title}
-              </Typography>
-            ))}
-          </Box>
-        </Box>
-      </Box>
     </Box>
   );
 }

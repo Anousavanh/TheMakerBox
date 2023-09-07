@@ -106,7 +106,7 @@ function page() {
         </Box>
       </Box>
 
-      <Box
+      {/* <Box
         sx={{
           display: {
             xs: "none",
@@ -177,9 +177,9 @@ function page() {
             </Button>
           </Box>
         </Box>
-      </Box>
+      </Box> */}
 
-      <Box
+      {/* <Box
         sx={{
           display: {
             xs: "none",
@@ -250,9 +250,9 @@ function page() {
             </Button>
           </Box>
         </Box>
-      </Box>
+      </Box> */}
 
-      <Box
+      {/* <Box
         sx={{
           display: {
             xs: "none",
@@ -323,9 +323,9 @@ function page() {
             </Button>
           </Box>
         </Box>
-      </Box>
+      </Box> */}
 
-      <Box
+      {/* <Box
         sx={{
           display: {
             xs: "block",
@@ -395,8 +395,8 @@ function page() {
               About us
             </Button>
           </Box>
-        </Box>
-      </Box>
+        </Box> 
+      </Box>*/}
     </Box>
   );
 }

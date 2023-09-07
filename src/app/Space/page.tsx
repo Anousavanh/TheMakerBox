@@ -63,17 +63,17 @@ function page() {
 
       <Box
         sx={{
-          display: { xs: "none", sm: "none", md: "none", lg: "block" },
+          display: "block",
         }}
       >
         <Box sx={{ textAlign: "center" }}>
-          <Box sx={{ p: "50px 200px" }}>
+          <Box sx={{ p: {xs:"50px 50px",sm: "50px 50px",md:"50px 100px",lg:"50px 200px"} }}>
             {Description.map((Descriptions) => (
               <Box key={Descriptions.id}>
-                <Typography sx={{ fontSize: "40px", color: "white" }}>
+                <Typography sx={{ fontSize: {xs:"25px",sm: "25px",md:"30px",lg:"40px"}, color: "white" }}>
                   {Descriptions.title}
                 </Typography>
-                <Typography sx={{ fontSize: "20px", color: "white" }}>
+                <Typography sx={{ fontSize: {xs:"15px", sm: "15px",lg:"20px"}, color: "white" }}>
                   {Descriptions.description}
                 </Typography>
               </Box>
@@ -82,8 +82,8 @@ function page() {
         </Box>
 
         <Box>
-          <Box sx={{ margin: "auto", width: "88%" }}>
-            <Box sx={{ display: "flex", gap: "50px", p: "70px" }}>
+          <Box sx={{ margin: {xs:"0 auto",sm:"auto",md:"auto",lg:"auto"}, width: {xs:"200px",sm:"90%",md:"100%",lg:"88%"} }}>
+            <Box sx={{ display: {xs:"block",sm:"flex",md:"flex",lg:"flex"}, gap: {sm:"20px",md:"20px",lg:"50px"}, p: {sm:"20px",md:"50px",lg:"70px"} }}>
               {Card.map((card) => (
                 <Box
                   key={card.id}
@@ -91,7 +91,7 @@ function page() {
                   sx={{
                     border: "5px solid #bbb",
                     borderRadius: "5px",
-                    width: "300px",
+                    width: {xs:"200px",sm:"300px",md:"300px",lg:"300px"},
                     height: "auto",
                     position: "relative",
                     cursor: "pointer",
@@ -101,6 +101,7 @@ function page() {
                 >
                   <Box>
                     <CardMedia
+                    sx={{display: {xs:"none",sm:"block",md:"block",lg:"block"},}}
                       component="img"
                       height="140"
                       image={card.image}
@@ -109,7 +110,7 @@ function page() {
                     <Typography
                       sx={{
                         padding: "10px 15px",
-                        fontSize: "20px",
+                        fontSize: {xs:"15px",sm: "15px",md:"17px",lg:"20px"},
                       }}
                     >
                       {card.title}
@@ -123,18 +124,18 @@ function page() {
             <Box
               sx={{
                 background: "#444",
-                p: "100px 150px",
+                p: {xs:"20px 20px",sm:"50px 50px",md:"50px 50px",lg:"100px 150px"},
                 xs: "block",
               }}
             >
               <Box
                 sx={{
-                  display: "flex",
+                  display: {xs:"block",sm: "block",md:"flex",lg:"flex"},
                   alignItems: "center",
                   justifyContent: "space-between",
                 }}
               >
-                <Box sx={{ width: "300px" }}>
+                <Box sx={{ width: {xs:"40%",sm: "40%",md:"200%",lg:"40%"},margin:{xs:"0 auto",sm: "0 auto",} }}>
                   <CardMedia
                     component="img"
                     height="140"
@@ -145,13 +146,13 @@ function page() {
                 <Box
                   sx={{
                     textAlign: "center",
-                    width: "800px",
+                    width: {lg:"800px"},
                   }}
                 >
-                  <Typography sx={{ fontSize: "30px", color: "white" }}>
+                  <Typography sx={{ fontSize: {xs:"25px",sm: "25px",md:"25px",lg:"30px"}, color: "white" }}>
                     {activeCard.title}
                   </Typography>
-                  <Typography sx={{ fontSize: "20px", color: "white" }}>
+                  <Typography sx={{ fontSize: {xs:"15px",sm: "15px",md:"15px",lg:"20px"}, color: "white" }}>
                     {activeCard.description}
                   </Typography>
                 </Box>
@@ -161,311 +162,11 @@ function page() {
         </Box>
       </Box>
 
-      <Box
-        sx={{
-          display: { xs: "none", sm: "none", md: "block", lg: "none" },
-        }}
-      >
-        <Box sx={{ textAlign: "center" }}>
-          <Box sx={{ p: "50px 100px" }}>
-            {Description.map((Descriptions) => (
-              <Box key={Descriptions.id}>
-                <Typography sx={{ fontSize: "30px", color: "white" }}>
-                  {Descriptions.title}
-                </Typography>
-                <Typography sx={{ fontSize: "20px", color: "white" }}>
-                  {Descriptions.description}
-                </Typography>
-              </Box>
-            ))}
-          </Box>
-        </Box>
+      
 
-        <Box>
-          <Box sx={{ margin: "auto", width: "100%" }}>
-            <Box sx={{ display: "flex", gap: "20px", p: "50px" }}>
-              {Card.map((card) => (
-                <Box
-                  key={card.id}
-                  onClick={() => setActiveCard(card)}
-                  sx={{
-                    border: "5px solid #bbb",
-                    borderRadius: "5px",
-                    width: "300px",
-                    height: "auto",
-                    position: "relative",
-                    cursor: "pointer",
-                    color: "white",
-                    textAlign: "center",
-                  }}
-                >
-                  <Box>
-                    <CardMedia
-                      component="img"
-                      height="140"
-                      image={card.image}
-                      alt="img"
-                    />
-                    <Typography
-                      sx={{
-                        padding: "10px 15px",
-                        fontSize: "17px",
-                      }}
-                    >
-                      {card.title}
-                    </Typography>
-                  </Box>
-                </Box>
-              ))}
-            </Box>
-          </Box>
-          <Box>
-            <Box
-              sx={{
-                background: "#444",
-                p: "100px 150px",
-                xs: "block",
-              }}
-            >
-              <Box
-                sx={{
-                  display: "block",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Box
-                  sx={{
-                    margin: "0 auto",
-                    width: "40%",
-                  }}
-                >
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image={activeCard.image}
-                    alt="img"
-                  />
-                </Box>
-                <Box
-                  sx={{
-                    textAlign: "center",
-                  }}
-                >
-                  <Typography sx={{ fontSize: "25px", color: "white" }}>
-                    {activeCard.title}
-                  </Typography>
-                  <Typography sx={{ fontSize: "15px", color: "white" }}>
-                    {activeCard.description}
-                  </Typography>
-                </Box>
-              </Box>
-            </Box>
-          </Box>
-        </Box>
-      </Box>
+     
 
-      <Box
-        sx={{
-          display: { xs: "none", sm: "block", md: "none", lg: "none" },
-        }}
-      >
-        <Box sx={{ textAlign: "center" }}>
-          <Box sx={{ p: "50px 50px" }}>
-            {Description.map((Descriptions) => (
-              <Box key={Descriptions.id}>
-                <Typography sx={{ fontSize: "25px", color: "white" }}>
-                  {Descriptions.title}
-                </Typography>
-                <Typography sx={{ fontSize: "15px", color: "white" }}>
-                  {Descriptions.description}
-                </Typography>
-              </Box>
-            ))}
-          </Box>
-        </Box>
-
-        <Box>
-          <Box>
-            <Box sx={{ display: "flex", gap: "20px", p: "20px" }}>
-              {Card.map((card) => (
-                <Box
-                  key={card.id}
-                  onClick={() => setActiveCard(card)}
-                  sx={{
-                    border: "5px solid #bbb",
-                    borderRadius: "5px",
-                    width: "300px",
-                    height: "auto",
-                    position: "relative",
-                    cursor: "pointer",
-                    color: "white",
-                    textAlign: "center",
-                  }}
-                >
-                  <Box>
-                    <CardMedia
-                      component="img"
-                      height="140"
-                      image={card.image}
-                      alt="img"
-                    />
-                    <Typography
-                      sx={{
-                        padding: "10px 15px",
-                        fontSize: "15px",
-                      }}
-                    >
-                      {card.title}
-                    </Typography>
-                  </Box>
-                </Box>
-              ))}
-            </Box>
-          </Box>
-          <Box>
-            <Box
-              sx={{
-                background: "#444",
-                p: "50px 50px",
-                xs: "block",
-              }}
-            >
-              <Box
-                sx={{
-                  display: "block",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Box
-                  sx={{
-                    margin: "0 auto",
-                    width: "40%",
-                  }}
-                >
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image={activeCard.image}
-                    alt="img"
-                  />
-                </Box>
-                <Box
-                  sx={{
-                    textAlign: "center",
-                  }}
-                >
-                  <Typography sx={{ fontSize: "25px", color: "white" }}>
-                    {activeCard.title}
-                  </Typography>
-                  <Typography sx={{ fontSize: "15px", color: "white" }}>
-                    {activeCard.description}
-                  </Typography>
-                </Box>
-              </Box>
-            </Box>
-          </Box>
-        </Box>
-      </Box>
-
-      <Box
-        sx={{
-          display: { xs: "block", sm: "none", md: "none", lg: "none" },
-        }}
-      >
-        <Box sx={{ textAlign: "center" }}>
-          <Box sx={{ p: "50px 50px" }}>
-            {Description.map((Descriptions) => (
-              <Box key={Descriptions.id}>
-                <Typography sx={{ fontSize: "25px", color: "white" }}>
-                  {Descriptions.title}
-                </Typography>
-                <Typography sx={{ fontSize: "15px", color: "white" }}>
-                  {Descriptions.description}
-                </Typography>
-              </Box>
-            ))}
-          </Box>
-        </Box>
-
-        <Box>
-          <Box>
-            <Box sx={{ margin: "0 auto", width: "40%", }}>
-              {Card.map((card) => (
-                <Box
-                  key={card.id}
-                  onClick={() => setActiveCard(card)}
-                  sx={{
-                    border: "5px solid #bbb",
-                    borderRadius: "5px",
-                    width: "200px",
-                    height: "auto",
-                    position: "relative",
-                    cursor: "pointer",
-                    color: "white",
-                    textAlign: "center",
-                  }}
-                >
-                  <Box >
-                    <Typography
-                      sx={{
-                        padding: "10px 15px",
-                        fontSize: "15px",
-                      }}
-                    >
-                      {card.title}
-                    </Typography>
-                  </Box>
-                </Box>
-              ))}
-            </Box>
-          </Box>
-          <Box>
-            <Box
-              sx={{
-                background: "#444",
-                p: "20px 20px",
-                xs: "block",
-              }}
-            >
-              <Box
-                sx={{
-                  display: "block",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Box
-                  sx={{
-                    margin: "0 auto",
-                    width: "40%",
-                  }}
-                >
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image={activeCard.image}
-                    alt="img"
-                  />
-                </Box>
-                <Box
-                  sx={{
-                    textAlign: "center",
-                  }}
-                >
-                  <Typography sx={{ fontSize: "25px", color: "white" }}>
-                    {activeCard.title}
-                  </Typography>
-                  <Typography sx={{ fontSize: "15px", color: "white" }}>
-                    {activeCard.description}
-                  </Typography>
-                </Box>
-              </Box>
-            </Box>
-          </Box>
-        </Box>
-      </Box>
+      
     </Box>
   );
 }
