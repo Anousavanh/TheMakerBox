@@ -50,42 +50,6 @@ const pages = [
     description: "Description for Event Space...",
     image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
   },
-  {
-    id: 7,
-    title: "5",
-    description: "Description for Event Space...",
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
-  },
-  {
-    id: 7,
-    title: "5",
-    description: "Description for Event Space...",
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
-  },
-  {
-    id: 7,
-    title: "5",
-    description: "Description for Event Space...",
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
-  },
-  {
-    id: 7,
-    title: "5",
-    description: "Description for Event Space...",
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
-  },
-  {
-    id: 7,
-    title: "5",
-    description: "Description for Event Space...",
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
-  },
-  {
-    id: 7,
-    title: "5",
-    description: "Description for Event Space...",
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
-  },
 ];
 
 function page() {
@@ -146,5 +110,4 @@ function page() {
     </Box>
   );
 }
-
 export default page;
