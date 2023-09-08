@@ -1,0 +1,27 @@
+.container {
+    height: 50px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .precontainer {
+    margin: 0 auto; /* Center the element horizontally */
+    width: 90%; /* Adjust the width as needed */
+    gap: 1rem; /* Adjust the gap as needed */
+    display: flex;
+    flex-wrap: wrap; /* Wrap children on smaller screens */
+  }
+  
+  .social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .icon {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+  
