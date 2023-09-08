@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
+import Link from 'next/link'
 
 const pages = [
   {
@@ -55,7 +56,7 @@ export default function Home() {
               </Button>
             </Box>
         </Box>
-        <Box sx={{ width:{xs:"200px",sm:"300px",md:"400px",lg:"500px"},background:"#111"}}>
+        <Box sx={{ width:{xs:"200px",sm:"300px",md:"400px",lg:"500px"}}}>
           <Image src={mainlogo} alt="logo" />
         </Box>
       </Box>
