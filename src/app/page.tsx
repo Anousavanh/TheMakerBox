@@ -1,5 +1,4 @@
 import Image from "next/image";
-// import styles from "./page.module.css";
 import mainlogo from "public/logo.png";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
