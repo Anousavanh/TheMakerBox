@@ -58,7 +58,7 @@ function page() {
               </Button>
             </Box>
           </Box>
-          <Box sx={{ width: {xs:"150px",sm:"300px",md:"400px"} }}>
+          <Box sx={{ width: {xs:"150px",sm:"300px",md:"400px"}}}>
             <Image src={Logo} alt="logo" />
           </Box>
         </Box>
