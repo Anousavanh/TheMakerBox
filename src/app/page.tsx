@@ -1,10 +1,10 @@
-import React from "react";
+import Image from "next/image";
+// import styles from "./page.module.css";
+import mainlogo from "public/logo.png";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Image from "next/image";
-import Logo from "public/logo.png";
-import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
 
 const pages = [
   {
@@ -23,26 +23,24 @@ const pages = [
     title: "Rebuild it",
   },
 ];
-function page() {
+export default function Home() {
   return (
-    <Box>
-      <Container maxWidth="xl">
-        <Box
-          sx={{
-            display:"flex" ,
-            alignItems: "center",
-            justifyContent: {xs:"center",sm:"center" ,md:"space-between"},
-            height: {xs:"400px",md:"891px"},
-            gap:{xs:"100px"}
-          }}
-        >
-          <Box>
-            {pages.map((page) => (
-              <Typography sx={{ color: "#444", fontSize: {xs:"25px",sm:"30px",md:"75px"} }}>
-                {page.title}
-              </Typography>
-            ))}
-            <Box sx={{ textAlign: "center" }}>
+    <Container maxWidth="xl" sx={{ height: {xs:"400px",sm:"833px"}, p: {xs:"30px 40px",sm:"200px 30px",md:"100px 100px"} }}>
+      <Box sx={{display:"flex",alignItems:"center",gap:"10px",justifyContent:"space-between"}}>
+        <Box sx={{display:"flex",flexDirection:"column",gap:"30px" }} >
+          {pages.map((page) => (
+            <Typography
+              sx={{
+                background: "linear-gradient(to bottom,#03BCA3, #bbb)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                fontSize:{xs:"20px",sm:"40px",md:"50px",lg:"65px"},
+              }}
+            >
+              {page.title}
+            </Typography>
+          ))}
+          <Box sx={{ textAlign:"center" }}>
               <Button
                 size="large"
                 href="About_us"
@@ -57,14 +55,11 @@ function page() {
                 About us
               </Button>
             </Box>
-          </Box>
-          <Box sx={{ width: {xs:"150px",sm:"300px",md:"400px"}}}>
-            <Image src={Logo} alt="logo" />
-          </Box>
         </Box>
-      </Container>
-    </Box>
+        <Box sx={{ width:{xs:"200px",sm:"300px",md:"400px",lg:"500px"},background:"#111"}}>
+          <Image src={mainlogo} alt="logo" />
+        </Box>
+      </Box>
+    </Container>
   );
 }
-
-export default page;
