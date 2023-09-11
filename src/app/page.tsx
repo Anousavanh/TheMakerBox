@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <Container maxWidth="xl" sx={{ height: {xs:"400px",sm:"833px"}, p: {xs:"30px 40px",sm:"200px 30px",md:"100px 100px"} }}>
       <Box sx={{display:"flex",alignItems:"center",gap:"10px",justifyContent:"space-between"}}>
-        <Box sx={{display:"flex",flexDirection:"column",gap:"30px" }} >
+        <Box sx={{display:"flex",flexDirection:"column",gap:"20px" }} >
           {pages.map((page) => (
             <Typography
               sx={{
@@ -56,7 +56,7 @@ export default function Home() {
               </Button>
             </Box>
         </Box>
-        <Box sx={{ width:{xs:"200px",sm:"300px",md:"400px",lg:"500px"}}}>
+        <Box sx={{ width:{xs:"170px",sm:"300px",md:"400px",lg:"500px"}}}>
           <Image src={mainlogo} alt="logo" />
         </Box>
       </Box>
