@@ -36,17 +36,17 @@
 
 //---
 import Post from '@/app/models/Post'
-import connect from '@/utils/db'
+import connect from '@/app/utils/db'
+// import connect from '@/utils/db'
 import { NextResponse } from 'next/server'
-
 interface Params {
     id: string,
 }
 
 export const GET = async (request, {params}: {params: Params}) => {
 
-    const{ id } = params
 
+    const{ id } = params
   try {
     await connect()
 

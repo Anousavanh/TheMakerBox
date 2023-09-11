@@ -41,7 +41,7 @@
 
 //---2
 import Post from '@/app/models/Post'
-import connect from '@/utils/db'
+import connect from '@/app/utils/db'
 import { NextResponse } from 'next/server'
 
 export const GET = async (request:any) => {
