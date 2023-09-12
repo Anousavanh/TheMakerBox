@@ -52,7 +52,7 @@ export default function Home() {
                   fontSize:{xs:"14px"}
                 }}
               >
-                About us
+                What is Makerbox Lao ?
               </Button>
             </Box>
         </Box>
